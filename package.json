@@ -1,0 +1,28 @@
+{
+  "name": "zk-fetch-stripe-webhook-demo",
+  "version": "1.0.0",
+  "description": "Stripe webhook demo with zkFetch integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "download:circuits": "node node_modules/@reclaimprotocol/zk-fetch/scripts/download-files"
+  },
+  "keywords": [
+    "stripe",
+    "webhook",
+    "zkfetch"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reclaimprotocol/zk-fetch": "^0.6.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "koffi": "^2.14.1",
+    "stripe": "^14.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
