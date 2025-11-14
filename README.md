@@ -46,9 +46,9 @@ STRIPE_SECRET_KEY=rk_test_your_restricted_key
 # This gets generated when you run stripe listen
 STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret
 
-# Get these from Reclaim Protocol Develeoper portal https://dev.reclaimprotocol.org
-# Create new application and copy the app_id and app_secret and don't forget the toggle the zkFetch in the app dashboard 
-# you can skip add provider section
+# Get these from the Reclaim Protocol Developer Portal: https://dev.reclaimprotocol.org
+# Create a new application, copy the APP_ID and APP_SECRET, and don’t forget to enable zkFetch in the app dashboard.
+# You can skip the “Add Provider” section
 RECLAIM_APP_ID=your_app_id
 RECLAIM_APP_SECRET=your_app_secret
 
