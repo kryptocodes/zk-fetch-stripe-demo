@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 
-// Save proofs to JSON files so we can inspect them later
+// Save proofs to JSON files so we can inspect them later (optional)
 // Useful for debugging and testing before going to production
 exports.saveProof = async (proof, paymentId) => {
   try {
