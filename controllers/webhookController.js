@@ -31,7 +31,6 @@ exports.handleWebhook = async (req, res) => {
 };
 
 // Helper function to call our /generate-proof endpoint
-// We use http.request here to avoid fetch compatibility issues with older Node versions
 async function forwardToProofGeneration(event) {
   return new Promise((resolve, reject) => {
     const eventData = JSON.stringify(event);
