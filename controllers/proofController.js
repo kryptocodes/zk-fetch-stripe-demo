@@ -41,13 +41,13 @@ exports.generateProof = async (req, res) => {
               value: '"id":\\s*"(?<id>[^"]+)"[\\s\\S]*?"amount":\\s*(?<amount>\\d+)[\\s\\S]*?"currency":\\s*"(?<currency>[^"]+)"[\\s\\S]*?"status":\\s*"(?<status>[^"]+)"'
             }
           ],
-          // Redact the matched data so it's not exposed in plain text (optional)
+          // Redact the matched data so it's not exposed in plain text
           // responseRedactions: [
           //   {
           //     regex: '"id":\\s*"(?<id>[^"]+)"[\\s\\S]*?"amount":\\s*(?<amount>\\d+)[\\s\\S]*?"currency":\\s*"(?<currency>[^"]+)"[\\s\\S]*?"status":\\s*"(?<status>[^"]+)"'
           //   }
           // ],
-          // The API key is hidden in the proof - this is the magic of zkFetch
+          // This headers won't be revealed in the proof and hidden from the verifier
           headers: {
             'Authorization': `Bearer ${process.env.STRIPE_SECRET_KEY}`
           }

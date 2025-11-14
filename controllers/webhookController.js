@@ -1,16 +1,12 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const http = require('http');
 
-// Main webhook handler - this is where Stripe sends events
-// We verify the signature to make sure it's actually from Stripe
 exports.handleWebhook = async (req, res) => {
   const sig = req.headers['stripe-signature'];
   const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
   let event;
 
   try {
-    // First, verify this webhook actually came from Stripe
-    // If the signature doesn't match, this will throw an error
     event = stripe.webhooks.constructEvent(req.body, sig, endpointSecret);
     console.log('Webhook verified:', event.type);
 
